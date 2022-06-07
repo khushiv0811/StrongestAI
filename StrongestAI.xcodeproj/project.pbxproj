@@ -16,6 +16,9 @@
 		347747DF284E8A1E003A1D2A /* StrongestAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347747DE284E8A1E003A1D2A /* StrongestAITests.swift */; };
 		347747E9284E8A1E003A1D2A /* StrongestAIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347747E8284E8A1E003A1D2A /* StrongestAIUITests.swift */; };
 		347747EB284E8A1E003A1D2A /* StrongestAIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347747EA284E8A1E003A1D2A /* StrongestAIUITestsLaunchTests.swift */; };
+		347747FC284E8B0A003A1D2A /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347747FB284E8B0A003A1D2A /* CardModel.swift */; };
+		347747FE284E8E39003A1D2A /* DeckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347747FD284E8E39003A1D2A /* DeckModel.swift */; };
+		34774802284EB3EE003A1D2A /* Card_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34774801284EB3EE003A1D2A /* Card_TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		347747E4284E8A1E003A1D2A /* StrongestAIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrongestAIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		347747E8284E8A1E003A1D2A /* StrongestAIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongestAIUITests.swift; sourceTree = "<group>"; };
 		347747EA284E8A1E003A1D2A /* StrongestAIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongestAIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		347747FB284E8B0A003A1D2A /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		347747FD284E8E39003A1D2A /* DeckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckModel.swift; sourceTree = "<group>"; };
+		34774801284EB3EE003A1D2A /* Card_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card_TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +105,13 @@
 		347747C6284E8A1D003A1D2A /* StrongestAI */ = {
 			isa = PBXGroup;
 			children = (
-				347747C7284E8A1D003A1D2A /* AppDelegate.swift */,
-				347747C9284E8A1D003A1D2A /* SceneDelegate.swift */,
+				347747FF284EB3BC003A1D2A /* Cells */,
+				347747FA284E8ADF003A1D2A /* Models */,
+				347747F7284E8A26003A1D2A /* Delegates  */,
 				347747CB284E8A1D003A1D2A /* ViewController.swift */,
-				347747CD284E8A1D003A1D2A /* Main.storyboard */,
-				347747D0284E8A1E003A1D2A /* Assets.xcassets */,
-				347747D2284E8A1E003A1D2A /* LaunchScreen.storyboard */,
+				347747F8284E8A39003A1D2A /* StroryBoards */,
 				347747D5284E8A1E003A1D2A /* Info.plist */,
+				347747F9284E8A47003A1D2A /* Resources */,
 			);
 			path = StrongestAI;
 			sourceTree = "<group>";
@@ -125,6 +131,57 @@
 				347747EA284E8A1E003A1D2A /* StrongestAIUITestsLaunchTests.swift */,
 			);
 			path = StrongestAIUITests;
+			sourceTree = "<group>";
+		};
+		347747F7284E8A26003A1D2A /* Delegates  */ = {
+			isa = PBXGroup;
+			children = (
+				347747C7284E8A1D003A1D2A /* AppDelegate.swift */,
+				347747C9284E8A1D003A1D2A /* SceneDelegate.swift */,
+			);
+			path = "Delegates ";
+			sourceTree = "<group>";
+		};
+		347747F8284E8A39003A1D2A /* StroryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				347747CD284E8A1D003A1D2A /* Main.storyboard */,
+				347747D2284E8A1E003A1D2A /* LaunchScreen.storyboard */,
+			);
+			path = StroryBoards;
+			sourceTree = "<group>";
+		};
+		347747F9284E8A47003A1D2A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				347747D0284E8A1E003A1D2A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		347747FA284E8ADF003A1D2A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				347747FB284E8B0A003A1D2A /* CardModel.swift */,
+				347747FD284E8E39003A1D2A /* DeckModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		347747FF284EB3BC003A1D2A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				34774800284EB3C3003A1D2A /* Table View Cell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		34774800284EB3C3003A1D2A /* Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				34774801284EB3EE003A1D2A /* Card_TableViewCell.swift */,
+			);
+			path = "Table View Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +316,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				347747CC284E8A1D003A1D2A /* ViewController.swift in Sources */,
+				347747FE284E8E39003A1D2A /* DeckModel.swift in Sources */,
+				347747FC284E8B0A003A1D2A /* CardModel.swift in Sources */,
+				34774802284EB3EE003A1D2A /* Card_TableViewCell.swift in Sources */,
 				347747C8284E8A1D003A1D2A /* AppDelegate.swift in Sources */,
 				347747CA284E8A1D003A1D2A /* SceneDelegate.swift in Sources */,
 			);

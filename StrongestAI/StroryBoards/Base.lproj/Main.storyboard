@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StrongestAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uPZ-ik-45x">
+                                <rect key="frame" x="0.0" y="80" width="414" height="816"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Card_TableViewCell" rowHeight="122" id="As8-Kd-FFC" customClass="Card_TableViewCell" customModule="StrongestAI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="122"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="As8-Kd-FFC" id="j8S-b4-wkt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDF-eL-5QU">
+                                                    <rect key="frame" x="37" y="44" width="46" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="46" id="fqy-yZ-aBY"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cs-Bf-RDi">
+                                                    <rect key="frame" x="132" y="44" width="46" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="46" id="WDJ-6y-8rg"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6Cs-Bf-RDi" firstAttribute="leading" secondItem="EDF-eL-5QU" secondAttribute="trailing" constant="49" id="6Oq-OP-Nfs"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="EDF-eL-5QU" secondAttribute="bottom" constant="22" id="LPv-Wj-3WT"/>
+                                                <constraint firstItem="EDF-eL-5QU" firstAttribute="top" secondItem="j8S-b4-wkt" secondAttribute="topMargin" constant="33" id="PfG-Gu-Cju"/>
+                                                <constraint firstItem="EDF-eL-5QU" firstAttribute="leading" secondItem="j8S-b4-wkt" secondAttribute="leadingMargin" constant="17" id="QLL-88-3jy"/>
+                                                <constraint firstItem="EDF-eL-5QU" firstAttribute="top" secondItem="6Cs-Bf-RDi" secondAttribute="top" id="RON-kP-jEE"/>
+                                                <constraint firstItem="EDF-eL-5QU" firstAttribute="baseline" secondItem="6Cs-Bf-RDi" secondAttribute="baseline" id="kkA-cJ-hPD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label_cardname" destination="6Cs-Bf-RDi" id="thz-rl-tqY"/>
+                                            <outlet property="label_cardsuit" destination="EDF-eL-5QU" id="CTg-OI-OxN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="kAZ-2z-rIq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nEh-Bc-tuf"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srB-bI-jOt">
+                                <rect key="frame" x="286" y="44" width="108" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="2Eb-r4-6QG"/>
+                                    <constraint firstAttribute="width" constant="108" id="qJU-RY-Pch"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="shuffle"/>
+                                <connections>
+                                    <action selector="onclick_shuffle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Pe-xz-ylF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uPZ-ik-45x" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2ch-Lw-eMU"/>
+                            <constraint firstItem="uPZ-ik-45x" firstAttribute="top" secondItem="srB-bI-jOt" secondAttribute="bottom" constant="-10" id="Kf3-XC-Fec"/>
+                            <constraint firstItem="uPZ-ik-45x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QT4-4J-NQ4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="srB-bI-jOt" secondAttribute="trailing" constant="20" id="nJm-Gy-Qfe"/>
+                            <constraint firstAttribute="bottom" secondItem="uPZ-ik-45x" secondAttribute="bottom" id="tDH-rD-rbP"/>
+                            <constraint firstItem="srB-bI-jOt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="w7o-sH-8E6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableview" destination="uPZ-ik-45x" id="rKb-he-NOx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="21.428571428571427"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
